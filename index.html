@@ -6,125 +6,263 @@
   </head>
   <body>
   	<header class="main-header">
-  		<nav class="main-header-navigation">
-  			<a class="main-header-logo">
-  				<img src="img/main_header_logo.svg" width="123" height="123" alt="Логотип магазина Device"> <!-- а логотип какой-то особенный? В том смысле, что нужно ли делать логотип картинкой или можно заключить "DEVICE" в <span> и подобрать оформление? -->
-  			</a>
-  			<form class="search-form">
-  				<input class="search-form-area" type="text" name="search">
-  			</form>	
-  			<ul class="user-navigation">
-  				<li class="login-link"><a href="#">Войти</a></li>
-  			</ul> 
-  			<a class="main-header-link"  href="#">Сравнить</a> <!-- Корявое имя класса. Не знаю как лучше их назвать. И мне кажется здесь еще нужен идентификатор, как и у корзины. это бы позволило в любой момент сделать уникальное форматирование этих элементов. -->
-  			<a class="main-header-link"  href="#">Корзина</a>  	
-  			<ul class="main-header-catalog">
-  				<li><a href="#">Виртуальная реальность</a></li> <!-- Как лучше, задавать классы на элементы списка, или вложенными селекторами обойтись? -->
-  				<li><a href="#">Моноподы для селфи</a></li>
-  				<li><a href="#">Экшен-камеры</a></li>
-  				<li><a href="#">Фитнес-браслеты</a></li>
-  				<li><a href="#">Умные часы</a></li>
-  				<li><a href="#">Квадрокоптеры</a></li>
-  			</ul>
-  			<ul class="main-header-information-list">
-  				<li><a href="#">Доставка</a></li>
-  				<li><a href="#">Гарантия</a></li>
-  				<li><a href="#">Контакты</a></li>
+  	    <div class="logo-block">
+  	   	  <a class="main-header-logo">
+  		  	<img src="img/device_header_logo.png" width="164" height="36" alt="Логотип магазина Device">
+  	   	  </a>
+  	   	</div>  
+  		<div class="header-user-block">
+  		  <form class="search-form" action="" method="get"> <!--Атрибут action пока пустым оставлять? -->
+  			<input class="search-form-area" type="search" name="search" placeholder="Поиск по сайту">
+  			<input class="search-form-button" type="submit" value="Найти">
+  		  </form>	
+  		  <ul class="header-user-navigation-list">
+  			<li class="header-user-navigation-item">
+  				<a class="main-header-link" href="#">Войти</a>
+  			</li>
+  		  </ul>
+  		  <ul class="header-visitor-options-list"> 
+  			<li class="header-visitor-options-item">
+  				<a class="main-header-link"  href="#">Сравнить</a>
+  			</li>	
+  			<li class="header-visitor-options-item">
+  				<a class="main-header-link"  href="#">Корзина</a>
+  			</li>
+  		  </ul>		
+  		</div>
+  		<nav class="main-header-navigation">  	
+  			<ul class="main-header-navigation-list">
+  				<li class="main-header-navigation-item catalog">Каталог товаров <!--Доставка, гарантия и контакты - это ссылки, это понятно. А вот этот пункт меню просто показывает выпадающее меню при наведении. Стили зададутся через класс,еще один класс я повесил для уникальности этого пункта меню. нужно ли еще как-то оборачивать текст "каталог товаров"?  -->
+	  				<ul class="main-header-catalog-list">  
+		  				<li class="main-header-catalog-item"><a href="#">Виртуальная реальность</a></li> 
+		  				<li class="main-header-catalog-item"><a href="#">Моноподы для селфи</a></li>
+		  				<li class="main-header-catalog-item"><a href="#">Экшен-камеры</a></li>
+		  				<li class="main-header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+		  				<li class="main-header-catalog-item"><a href="#">Умные часы</a></li>
+		  				<li class="main-header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+	  				</ul>
+  				</li>
+  			    <li class="main-header-navigation-item"><a href="#">Доставка</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Гарантия</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Контакты</a></li>
   			</ul>	 
   		</nav> 	
   	</header>
   	<main>
-  		<h1 class="hidden">Магазин гаджетов и электроники "Device"</h1> 
-  		<section class="slider">
-  			<h2 class="hidden">Cамая длинная палка для селфи</h2> <!-- не знаю првильно ли я сделал так заголовок и следующий элемент strong -->
-  			<img src="img/..." width="123" height="123" alt="Изображение товара">
-  			<p><strong>Делай селфи,<br> как Бен Стиллер!</strong>
-  				Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-  			</p>
-  			<a class="site-link" href="#">Подробнее</a>
-
-  			<!-- здесь будут кнопки слайдера. -->
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  			<table class="slider-product-specification">
-  				<tr>
-  					<td>Длина палки</td>
-  					<td>Вес палки</td>
-  					<td>Материал</td>
-  				</tr> 
-  				<tr>
-  					<td>8,5 м</td>
-  					<td>5 кг</td>
-  					<td>Карбон</td>
-  				</tr> 		
-  			</table>
-  		</section>
-  		<ul class="site-catalog">
-  				<li><a href="#">Виртуальная реальность</a></li>
-  				<li><a href="#">Моноподы для селфи</a></li>
-  				<li><a href="#">Экшен-камеры</a></li>
-  				<li><a href="#">Фитнес-браслеты</a></li>
-  				<li><a href="#">Умные часы</a></li>
-  				<li><a href="#">Квадрокоптеры</a></li>
-  		</ul>
-  		<ul class="site-information-list">   
-  			<li><a class="site-link" href="#">Доставка</a>
-  				<h3>Доставка</h3>     <!-- не знаю можно ли так будет сделать, или нужно контентную часть выносить в отдельный <section>? Или еще как-то иначе.  -->
-  				<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>	
-  			</li>
-  			<li><a class="site-link" href="#">Гарантия</a></li>
-  			<li><a class="site-link" href="#">Кредит</a></li>
-  		</ul>
-		<ul class="brand-logos">
-  			<li><img class="brand-logos-pic" src="123.jpg" alt="dji"></li>
-  			<li><img class="brand-logos-pic" src="123.jpg" alt="SP gadgets"></li>
-  			<li><img class="brand-logos-pic" src="123.jpg" alt="GoPro"></li>
-  			<li><img class="brand-logos-pic" src="123.jpg" alt="vive"></li>
-  		</ul>
-  		<section class="about-us">
-  			<h3>О нас</h3>
-  			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-  			<ul class="transport-companies-list">
-  				<li>Деловые линии</li>
-  				<li>Автотрейдинг</li>
-  				<li>ЖелДорЭкспедиция</li>
-  			</ul>
-  			<a class="site-link" href="#">Подробнее о нас</a>
-  		</section>
-  		<section class="contacts">
-  			<h3>Контакты</h3>
-  			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-  			<!-- Здесь будет карта -->
-  			<a class="site-link" href="#">Напишите нам</a>
+  		<h1 class="visually-hidden">Магазин гаджетов и электроники "Device"</h1> 
+  		<article class="slider">
+  			<ol class="slider-list">
+  				<li class="slider-list-item">	
+		  			<h2 class="visually-hidden">Cамая длинная палка для селфи</h2> <!-- не знаю првильно ли я сделал так заголовок и следующий элемент strong -->
+		  			<a href="#"><img src="img/slide_1.png" width="384" height="486" alt="Изображение товара"></a> <!-- стоит ли помещать картинку товара в контейнер? Просто она всего одна. Не думаю что как-то может помешать контенту справа, или будут проблемы с ней. Или я ошибаюсь? -->
+		  			<section class="slider-content"> <!--я так понимаю, что вся контентная часть должна быть сслыкой на товар, как и картинка товара. вот только как оборачивать ссылкой, чтобы не было конфликта с кнопками переключения слайдов, либо с чем еще?  -->
+			  			<p><strong>Делай селфи,<br> как Бен Стиллер!</strong>
+			  				Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+			  			</p>
+			  			<a class="interactive-item" href="#">Подробнее</a>
+			  			<ul class="slider-toggle-list">
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button current-slide-button">
+			  						<img src="img/slider_button.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  			</ul>
+			  			<table class="slider-product-specification">
+			  				<tr>
+			  					<td>Длина палки</td>
+			  					<td>Вес палки</td>
+			  					<td>Материал</td>
+			  				</tr> 
+			  				<tr>
+			  					<td>8,5 м</td>
+			  					<td>5 кг</td>
+			  					<td>Карбон</td>
+			  				</tr> 		
+			  			</table>
+			  		</section>	
+		  		</li>
+		  		<li class="slider-list-item">
+		  			<h2 class="visually-hidden">Мотивирующий фитнесс-браслет</h2>
+		  			<a href="#"><img src="img/slide_2.png" width="345" height="485" alt="Изображение товара"></a>
+		  			<section class="slider-content">
+		  				<p><strong>Худеем правильно!</strong>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+		  				<a class="interactive-item" href="#">Подробнее</a>
+		  				<ul class="slider-toggle-list">
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button current-slide-button">
+			  						<img src="img/slider_button.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  			</ul>
+			  			<table class="slider-product-specification">
+			  				<tr>
+			  					<td>Без подзарядки</td>
+			  				</tr> 
+			  				<tr>
+			  					<td>48 часов</td>
+			  				</tr>
+			  			</table>
+		  			</section>
+		  		</li>
+		  		<li class="slider-list-item">
+		  			<h2 class="visually-hidden">Квадрокоптер с лазером</h2>
+		  			<a href="#"><img src="img/slide_3.png" width="526" height="334" alt="Изображение товара"></a>
+		  			<section class="slider-content">
+			  			<p><strong>Порхает как бабочка,<br>жалит как пчела!</strong>Этот обычный, на первый взгляд квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+			  			<a class="interactive-item" href="#">Подробнее</a>
+			  			<ul class="slider-toggle-list">
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button">
+			  						<img src="img/slider_button_empty.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  				<li class="slider-toggle-list-item">
+			  					<button class="slider-button current-slide-button">
+			  						<img src="img/slider_button.svg" width="12" height="12" alt="переключение слайдера">
+			  					</button>
+			  				</li>
+			  			</ul>
+			  			<table class="slider-product-specification">
+			  				<tr>
+			  					<td>Дальность полета</td>
+			  					<td>Радиус поражения</td>
+			  				</tr> 
+			  				<tr>
+			  					<td>800 м</td>
+			  					<td>50 м</td>
+			  				</tr> 		
+			  			</table>
+			  		</section>	
+		  		</li>
+		  	</ol>			
+  		</article>
+  		<section class="site-catalog">
+	  		<ul class="site-catalog-list">
+	  				<li class="site-catalog-item"><a href="#">Виртуальная реальность</a></li>
+	  				<li class="site-catalog-item"><a href="#">Моноподы для селфи</a></li>
+	  				<li class="site-catalog-item"><a href="#">Экшен-камеры</a></li>
+	  				<li class="site-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+	  				<li class="site-catalog-item"><a href="#">Умные часы</a></li>
+	  				<li class="site-catalog-item"><a href="#">Квадрокоптеры</a></li>
+	  		</ul>
+	  	</section>
+	  	<section class="site-information">	
+	  		<ul class="site-information-list">   
+	  			<li><button class="interactive-item">Доставка</button>
+	  				<ul class="delivery-list"> <!-- Выпадающим списком мне кажется более логично по смыслу(есть четкая привязка контента к пункту меню и не надо делать доп.блоки внутри section). Но что-то мне подсказывает что я ерундой страдаю (будет тяжело стилизовать и вообще много лишнего кода получается). Так что если что, сделаю просто три diva или отдельный список-->
+	  					<li class="delivery-item">
+			  				<h3>Доставка</h3> 
+			  				<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+			  			</li>
+			  		</ul>			
+	  			</li>
+	  			<li><button class="interactive-item">Гарантия</button>
+	  				<ul class="warranty-list">
+	  					<li class="warranty-item">
+			  				<h3>Гарантия</h3> 
+			  				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+			  			</li>
+			  		</ul>		
+	  			</li>
+	  			<li><button class="interactive-item">Кредит</button>
+	  				<ul class="credit-list">
+	  					<li class="credit-item">
+			  				<h3>Кредит</h3> 
+			  				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+			  			</li>
+			  		</ul>		
+	  			</li>
+	  		</ul>
+	  	</section>	
+  		<section class="brand-logos-block">
+			<ul class="brand-logos-list">   <!-- а нужен ли здесь список, или это лишнее? -->
+	  			<li class="brand-logos-item"><img class="brand-logos-pic" src="img/logo_dji.png" width="260" height="100" alt="Логотип dji"></li>
+	  			<li class="brand-logos-item"><img class="brand-logos-pic" src="img/logo_sp_gadgets.png" width="260" height="100" alt="Логотип SP gadgets"></li>
+	  			<li class="brand-logos-item"><img class="brand-logos-pic" src="img/logo_gopro.png" width="260" height="100" alt="Логотип GoPro"></li>
+	  			<li class="brand-logos-item"><img class="brand-logos-pic" src="img/logo_vive.png" width="260" height="100" alt="Логотип vive"></li>
+	  		</ul>
+	  	</section>	
+  		<section class="about-company-information">
+	  		<section class="about-us">
+	  			<h3>О нас</h3>
+	  			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+	  			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+	  			<ul class="transport-companies-list">
+	  				<li class="transport-companies-item">Деловые линии</li>
+	  				<li class="transport-companies-item">Автотрейдинг</li>
+	  				<li class="transport-companies-item">ЖелДорЭкспедиция</li>
+	  			</ul>
+	  			<a class="interactive-item" href="#">Подробнее о нас</a>
+	  		</section>
+	  		<section class="contacts">
+	  			<h3>Контакты</h3>
+	  			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+	  			<button class="map">
+	  				<img src="img/map.jpg" width="560" height="222" alt="Наш адрес на карте">
+	  			</button>	
+	  			<button class="interactive-item">Напишите нам</button>
+	  		</section>
   		</section>
   	</main>	
   	<footer>
-  		<img src="img/..." width="123" height="123" alt="Логотип магазина Device"> 
-  		<p class="footer-address">г. Москва, ул. Строителей, 15</p>
-  		<ul class="footer-information-list">
-  				<li><a href="#">Доставка</a></li>
-  				<li><a href="#">Гарантия</a></li>
-  				<li><a href="#">Контакты</a></li>
-  		</ul>	  
-  		<ul class="footer-user-navigation">
-  			<li class="footer-login-link"><a href="#">Войти</a></li>
-  		</ul> 
-	  		<a class="footer-link"  href="#">Сравнить</a>
-	  		<a class="footer-link"  href="#">Корзина</a>
-  		<p class="footer-phone-number">Тел.: +7(495)495-95-95</p>
-  		<ul>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-        </ul>	
-  		<a  id="html-academy-link" href="https://htmlacademy.ru/">HTML academy</a>
-  	</footer>
-  </body>
-</html>
-
-
-    <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
-
+  		<div class="footer-user-block">
+	  		<img src="img/device_footer_logo.png" width="163" height="36" alt="Логотип магазина Device"> 
+	  		<ul class="footer-user-navigation-list">
+	  			<li class="footer-user-navigation-item">
+	  				<a class="footer-link" href="#">Войти</a>
+	  			</li>
+	  		</ul>
+	  		<ul class="footer-visitor-options-list">
+	  			<li class="footer-visitor-options-item">
+		  			<a class="footer-link"  href="#">Сравнить</a>
+		  		</li>
+		  		<li class="footer-visitor-options-item">	
+		  			<a class="footer-link"  href="#">Корзина</a>
+		  		</li>	
+		  	</ul>	
+	  	</div>
+	  	<div class="footer-information-block">	
+	  		<p class="footer-address">г. Москва, ул. Строителей, 15</p>
+	  		<ul class="footer-information-list">
+	  				<li class="footer-information-item"><a href="#">Доставка</a></li>
+	  				<li class="footer-information-item"><a href="#">Гарантия</a></li>
+	  				<li class="footer-information-item"><a href="#">Контакты</a></li>
+	  		</ul>	  
+	  		<p class="footer-phone-number">Тел.: +7(495)495-95-95</p>
+	  	</div>
+	  	<div class="footer-social-block">	
+	  		<ul class="footer-social-list">
+	          <li class="footer-social-item"><a class="social-button" href="#">Фейсбук</a></li>
+	          <li class="footer-social-item"><a class="social-button" href="#">Инстаграм</a></li>
+	          <li class="footer-social-item"><a class="social-button" href="#">Твиттер</a></li>
+	        </ul>	
+	  		<a  id="html-academy-link" href="https://htmlacademy.ru/">HTML academy</a>
+  		</div>
+  	</footer>    
   </body>
 </html>
