@@ -7,18 +7,18 @@
   <body>
   	<header class="main-header">
         <div class="logo-block">
-          <a class="main-header-logo">
-          <img src="img/device_header_logo.png" width="164" height="36" alt="Логотип магазина Device">
+          <a class="main-header-logo" href="index.html">
+            <img src="img/device-header-logo.png" width="164" height="36" alt="Логотип магазина Device">
           </a>
         </div>  
       <div class="user-block">
-        <form class="search-form" action="" method="get"> <!--Атрибут action пока пустым оставлять? -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input class="search-form-area" type="search" name="search" placeholder="Поиск по сайту">
           <input class="search-form-button" type="submit" value="Найти">
         </form> 
         <ul class="header-user-navigation-list">
           <li class="header-user-navigation-item">
-            <a class="main-header-link" href="#">Валентин Петухов</a>
+            <a class="main-header-link" href="profile.html">Валентин Петухов</a>
           </li>
           <li class="header-user-navigation-item">
             <a class="main-header-link" href="#">Выйти</a>
@@ -26,23 +26,24 @@
         </ul>
         <ul class="visitor-options-list"> 
           <li class="visitor-options-item"> 
-            <a class="main-header-link"  href="#">Сравнить</a>
+            <a class="main-header-link"  href="product-comparison.html">Сравнить</a>
           </li> 
           <li class="visitor-options-item"> 
-            <a class="main-header-link"  href="#">Корзина</a>
+            <a class="main-header-link"  href="basket.html">Корзина</a>
           </li>
         </ul>    
       </div>
       <nav class="main-header-navigation">    
         <ul class="main-header-navigation-list">
-          <li class="main-header-navigation-item catalog">Каталог товаров <!--Доставка, гарантия и контакты - это ссылки, это понятно. А вот этот пункт меню просто показывает выпадающее меню при наведении. Стили зададутся через класс,еще один класс я повесил для уникальности этого пункта меню. нужно ли еще как-то оборачивать текст "каталог товаров"?  -->
+          <li class="main-header-navigation-item catalog">
+            <a href="#">Каталог товаров</a> 
             <ul class="main-header-catalog-list">  
-              <li class="main-header-catalog-item"><a href="#">Виртуальная реальность</a></li> 
-              <li class="main-header-catalog-item"><a href="#">Моноподы для селфи</a></li>
-              <li class="main-header-catalog-item"><a href="#">Экшен-камеры</a></li>
-              <li class="main-header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-              <li class="main-header-catalog-item"><a href="#">Умные часы</a></li>
-              <li class="main-header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+              <li class="main-header-catalog-item"><a href="vr.html">Виртуальная реальность</a></li> 
+              <li class="main-header-catalog-item"><a>Моноподы для селфи</a></li>
+              <li class="main-header-catalog-item"><a href="action-cams.html">Экшен-камеры</a></li>
+              <li class="main-header-catalog-item"><a href="fitness-trackers.html">Фитнес-браслеты</a></li>
+              <li class="main-header-catalog-item"><a href="smart-watches.html">Умные часы</a></li>
+              <li class="main-header-catalog-item"><a href="quadrocopters.html">Квадрокоптеры</a></li>
             </ul>
           </li>
             <li class="main-header-navigation-item"><a href="#">Доставка</a></li>
@@ -63,14 +64,14 @@
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <b>Фильтр:</b> 
         </header>  
-          <form class="filter-form" action="" method="post">
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
            <fieldset class="cost-block"> 
              <legend>Стоимость</legend>        
-               <input type="range" name="cost"> <!-- а как сделать два ползунка? -->
+               <!-- тут будет ползунок из говна и палок -->
            </fieldset>
            <fieldset class="color-block">
              <legend>Цвет</legend>
-             <label>   <!-- Когда лейбл с кнопкой идет рядом, как лучше оборачивать кнопки в лейбл? Или кнопку делать выносить за лейбл и привязывать с помощью for?  -->
+             <label>
                 <input type="checkbox" name="black">Черный
              </label>
              <label>   
@@ -124,28 +125,28 @@
               <h3>
                 <a href="#">Любительская селфи-палка</a>
               </h3>
-              <a href="#"><img src="img/catalog_item_1.jpg" width="360" height="380" alt="Любительская селфи-палка"></a>
+              <a href="#"><img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская селфи-палка"></a>
               <span class="price">500руб.</span>
             </li>
             <li class="catalog-item"> 
               <h3>
                 <a href="#">Профессиональная селфи-палка</a>
               </h3>
-              <a href="#"><img src="img/catalog_item_2.jpg" width="360" height="380" alt="Профессиональная селфи-палка"></a>
+              <a href="#"><img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка"></a>
               <span class="price">1500руб.</span>
             </li>
             <li class="catalog-item"> 
               <h3>
                 <a href="#">Непотопляемая селфи-палка</a>
               </h3>
-              <a href="#"><img src="img/catalog_item_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка"></a>
+              <a href="#"><img src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка"></a>
               <span class="price">2500руб.</span>
             </li>
             <li class="catalog-item"> 
               <h3>
                 <a href="#">Селфи-палка "Следуй за мной"</a>
               </h3>
-              <a href="#"><img src="img/catalog_item_4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной"></a>
+              <a href="#"><img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной"></a>
               <span class="price">4900руб.</span>
             </li>
           </ul>
@@ -162,10 +163,10 @@
     </main> 
     <footer>
       <div class="footer-user-block">
-        <img src="img/device_footer_logo.png" width="163" height="36" alt="Логотип магазина Device"> 
+        <img src="img/device-footer-logo.png" width="163" height="36" alt="Логотип магазина Device"> 
         <ul class="footer-user-navigation-list">
           <li class="footer-user-navigation-item">
-            <a class="footer-link" href="#">Валентин Петухов</a>
+            <a class="footer-link" href="profile.html">Валентин Петухов</a>
           </li>
           <li class="footer-user-navigation-item">
             <a class="footer-link" href="#">Выйти</a>
@@ -195,7 +196,7 @@
             <li class="footer-social-item"><a class="social-button" href="#">Инстаграм</a></li>
             <li class="footer-social-item"><a class="social-button" href="#">Твиттер</a></li>
           </ul> 
-        <a  id="html-academy-link" href="https://htmlacademy.ru/">HTML academy</a>
+        <a  class="html-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a>
       </div>
     </footer>
   </body>
