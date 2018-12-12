@@ -45,6 +45,11 @@ a {
 	text-decoration: none;
 }     	     
 
+img {
+	max-width: 100%;
+	height:auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -58,48 +63,148 @@ a {
 header {
 	margin:0 auto;
 	width: 1160px;
+	padding: 0 60px;
 	margin-bottom: -129px;
 	background-image: linear-gradient(to bottom, transparent 40px, #f7e296  40px);
 }
 
-.logo-block,
-.header-user-block,
-nav {
-	width: 1040px;
-	margin: 0 auto;
+/* background-color: red;    для подсветки блоков */
+
+.logo-block {
+	padding-top: 20px;
 }
 
+.main-header-logo:hover {
+  /* пока думаю как сделать  */
+}
 
+.main-header-logo:active {
 
+}
 
-.header-user-block,
-.header-user-navigation-list,
-.header-visitor-options-list,
-nav,
-nav ul {
+.header-user-block {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
+}
+
+/* Стили формы поиска  */
+
+.search-form {
+	width: 440px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+}
+
+.search-form::before {   /* вообще не понимаю почему нет значка, хотя "123" отображается  */
+	content: "123";
+	position: absolute;
+    bottom: 26px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background-image: url("img/search.svg");
+	background-repeat: no-repeat;
+}
+
+.search-form-area {
+	padding-left: 40px;
+	padding-bottom: 18px;
+	background-color: #f7e296; 
+	border: none;
+	border-bottom: 2px solid transparent;
+	flex-grow: 1;
+}
+
+.search-form-button {
+	background-color: transparent;
+	border: 2px solid transparent;
+	padding: 18px; 
+	visibility: hidden;
+}
+
+.search-form-area:hover {
+	/* Стили placeholder  */;
+}
+
+.search-form-area:focus{
+	border-bottom: 2px solid #000000;
+	outline: none;
+}
+
+.search-form-area:focus + .search-form-button, 
+.search-form-button:focus {
+	visibility: visible;
+	border: 2px solid #000000;
+}
+
+.search-form-button:hover {   /* не работает  */
+	visibility: visible;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.search-form-button:active {   /* тоже не работает  */
+	visibility: visible;
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #000000;
 }
 
 
-
-
-
+/*  Стили каталога  */
 
 .header-user-navigation-list,
-.header-visitor-options-list,
-.main-header-navigation-list {
+.header-visitor-options-list {
+	display: inherit;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.main-header-catalog-list {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+.header-user-navigation-item,
+.header-visitor-options-item {
+	margin-left: 20px;
 }
+
+.header-user-navigation-list a,
+.header-visitor-options-list a {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	color: #000000;
+}
+
+.login-link {
+	padding-left: 28px; 
+	background-color: red;
+}
+
+.login-link:before {
+	content: "123";
+	width: 13px;
+	height: 12px;
+	background-image: url("img/user.svg"); /* так, я уже ничего не понимаю  */
+}
+
+
+.main-header-navigation-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	justify-content: space-between;
+}
+
+.main-header-catalog-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 
 .main-header-navigation-list a {
 	font-family: "Gilroy";
@@ -117,16 +222,29 @@ nav ul {
 	color: #000000;
 }
 
-.header-user-navigation-list a,
-.header-visitor-options-list a {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 15px;
-	font-weight: 300;
-	line-height: 30px;
-	color: #000000;
-}
+
 
 /*  MAIN  */
+
+article {
+	width: 1160px; 
+	margin: 0 auto;
+	
+}
+
+.slider-list {
+	margin: 0;
+	padding: 0;
+}
+
+.slider-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-content div {
+	width: 50%;
+}
 
 .slider-content strong {
 	font-family: "Gilroy";
@@ -136,7 +254,7 @@ nav ul {
 	color: #000000;
 }
 
-.slider-product-specification tr:first-child td {
+.slider-product-specification tr:first-child td {   /* потом просто навешу класс на эти ячейки  */
 	font-size: 13px;
 	line-height: 20px;
 }
@@ -149,39 +267,6 @@ nav ul {
 	color: #000000;
 }
 
-.interactive-item {
-	display: inline-block;
-	font-family: "Gilroy";
-	font-size: 18px;
-	font-weight: 800;
-	line-height: 24px;
-	color: #000000;
-	text-transform: uppercase;
-	background-image: linear-gradient(transparent 8px, #f0c52e 8px, #f0c52e 16px, transparent);
-}
-
-.site-catalog-list,
-.site-information-list,
-.content-list,
-.brand-logos-list {
-	list-style: none;
-}
-
-article {
-	width: 1160px; 
-	margin: 0 auto;
-	position: relative;
-}
-
-.slider-content {
-	display: flex;
-	justify-content: space-between;
-}
-
-.slider-content div {
-	width: 50%;
-}
-
 .slider-toggle-list {
 	display: flex;
 	justify-content: space-between;
@@ -190,11 +275,78 @@ article {
 	top: 400px;
 }
 
-.wrapper {
-	width: 1160px;
-	margin: 0 auto;
-	display: flex;
+/*  Стили ссылок/кнопок  */
+
+.interactive-item {
+	display: inline-block;
+	padding: 0 45px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 24px; 
+	font-family: "Gilroy";
+	font-size: 18px;
+	font-weight: 800;
+	color: #000000;
+	text-transform: uppercase;
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent);
 }
+
+.interactive-item:hover,
+.interactive-item:focus {
+	background-color: #f0c52e;
+}
+
+.interactive-item:active {
+	background-color: #f0c52e;
+	color: #464646;
+}
+/*
+.interactive-item.button {
+	width: 160px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "Gilroy";
+	font-size: 18px;
+	font-weight: 800;
+	color: #000000;
+	text-transform: uppercase;
+	border: none;
+	line-height: 40px;
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent);
+}
+
+.interactive-item.button:active:hover {
+	background-color: #f0c52e;
+}
+
+.interactive-item.button:active li,
+.interactive-item.button:active {
+	background-color: #000000;
+	color: #f7e184;
+}
+
+*/
+.site-information {
+	background-image: linear-gradient(transparent 97px, #e5e5e5 97px, #e5e5e5);
+}
+
+
+.site-information-wrapper { 
+	display: flex;
+	margin: 0 auto;
+	width: 1160px;
+	background-color: red;
+ }
+
+.site-information-list {
+	list-style: none;
+	margin: 0;
+	width: 280px;
+	border-right: 7px solid	#000000; 
+}
+
 
 
 .site-catalog {
@@ -251,9 +403,7 @@ article {
 	color: #000000;
 }
 
-.site-information {
-	background-color: #e5e5e5;
-}
+
 
 
 
@@ -273,8 +423,39 @@ footer a {
 .footer-social-block {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	width: 1160px;
 	margin: 0 auto;
+}
+
+.footer-user-block {
+	padding-top: 66px; 
+}
+
+.footer-user-navigation-list,
+.footer-visitor-options-list {
+	list-style: none;
+	display: inherit;
+}
+
+.footer-information-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-information-list {
+	list-style: none;
+	display: flex;
+}
+
+.footer-information-item {
+	padding: 20px;
+}
+
+.footer-social-list {
+	display: flex;
+	justify-content: center;
 }
 
 .footer-information-list a {
