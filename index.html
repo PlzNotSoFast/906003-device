@@ -7,7 +7,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-  	<header class="main-header">
+  	<header class="main-header container">
   	    <div class="logo-block">
   	   	  <a class="main-header-logo">
   		  	<img src="img/device-header-logo.png" width="164" height="36" alt="Логотип магазина Device">
@@ -28,38 +28,44 @@
   				<a class="main-header-link product-comparison-link"  href="product-comparison.html">Сравнить</a>
   			</li>	
   			<li class="header-visitor-options-item">
-  				<a class="main-header-link basket-link"  href="basket.html">Корзина</a>
+  				<a class="main-header-link cart-link"  href="cart.html">Корзина</a>
   			</li>
   		  </ul>		
   		</div>
   		<nav class="main-header-navigation">  	
   			<ul class="main-header-navigation-list">
   				<li class="main-header-navigation-item catalog">
-  					<a href="catalog.html">Каталог товаров</a> 
-	  				<ul class="main-header-catalog-list">  
-		  				<li class="main-header-catalog-item">
-		  					<a href="vr.html">Виртуальная реальность</a>
-		  				</li> 
-		  				<li class="main-header-catalog-item">
-		  					<a href="inner.html">Моноподы для селфи</a>
-		  				</li> 
-		  				<li class="main-header-catalog-item">
-		  					<a href="action-cams.html">Экшен-камеры</a>
-		  				</li>
-		  				<li class="main-header-catalog-item">
-		  					<a href="fitness-trackers.html">Фитнес-браслеты</a>
-		  				</li>
-		  				<li class="main-header-catalog-item">
-		  					<a href="smart-watches.html">Умные часы</a>
-		  				</li>
-		  				<li class="main-header-catalog-item">
-		  					<a href="quadrocopters.html">Квадрокоптеры</a>
-		  				</li>
-	  				</ul>
+  					<a class="catalog-link" href="catalog.html">Каталог товаров</a> 
+  					<div class="main-header-navigation-wrapper">
+		  				<ul class="main-header-catalog-list">  
+			  				<li class="main-header-catalog-item">
+			  					<a href="vr.html">Виртуальная реальность</a>
+			  				</li> 
+			  				<li class="main-header-catalog-item">
+			  					<a href="inner.html">Моноподы для селфи</a>
+			  				</li> 
+			  				<li class="main-header-catalog-item">
+			  					<a href="action-cams.html">Экшен-камеры</a>
+			  				</li>
+			  			</ul>
+			  			<ul class="main-header-catalog-list">	
+			  				<li class="main-header-catalog-item">
+			  					<a href="fitness-trackers.html">Фитнес-браслеты</a>
+			  				</li>
+			  				<li class="main-header-catalog-item">
+			  					<a href="smart-watches.html">Умные часы</a>
+			  				</li>
+			  			</ul>	
+			  			<ul class="main-header-catalog-list">	
+			  				<li class="main-header-catalog-item">
+			  					<a href="quadrocopters.html">Квадрокоптеры</a>
+			  				</li>
+		  				</ul>
+		  			</div>
   				</li>
   			    <li class="main-header-navigation-item">
   			    	<a href="#">Доставка</a>
-  			    </li> <!--а не баттоны ли это должны быть? Ведь по клику на эти ссылки, как я понимаю, должен какбы происходить клик по баттону в слайдере доставка/гарантия/кредит    -->
+  			    </li>
   				<li class="main-header-navigation-item">
   					<a href="#">Гарантия</a>
   				</li>
@@ -69,136 +75,160 @@
   			</ul>	 
   		</nav> 	
   	</header>
-  	<main>
+  	<main class="container">
   		<h1 class="visually-hidden">Магазин гаджетов и электроники "Device"</h1> 
   		<article class="slider">
+  			<ul class="slider-toggle-list">
+			  	<li class="slider-toggle-list-item">
+			  		<label for="slide-1">
+			  			Первый слайд
+			  		</label>	
+			  	</li>
+			  	<li class="slider-toggle-list-item">
+			  		<label for="slide-2">
+			  			Второй слайд
+			  		</label>	
+			  	</li>
+			  	<li class="slider-toggle-list-item">
+			  		<label for="slide-3">
+			  			Третий слайд
+			  		</label>	
+			  	</li>
+			</ul>			
   			<ol class="slider-list">
   				<li class="slider-list-item">
+  					<input type="radio"  class="visually-hidden slider-button" name="slider-toggle" id="slide-1" checked>
   					<section class="slider-content">	
-			  			<h2 class="visually-hidden">Cамая длинная палка для селфи</h2> <!-- не знаю првильно ли я сделал так заголовок и следующий элемент strong -->
-			  			<div class="slider-image">
-				  			<a href="#">
-				  				<img src="img/slide-1.png" width="384" height="486" alt="Изображение товара">
-				  			</a>
-				  		</div>
-				  		<div class="slider-information">	
-				  			<p><strong>Делай селфи,<br> как Бен Стиллер!</strong></p>
-					  		<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-				  			</p>
-				  			<a class="interactive-item" href="#">Подробнее</a>
-				  			<table class="slider-product-specification">
-				  				<tr>
-				  					<td>Длина палки</td>
-				  					<td>Вес палки</td>
-				  					<td>Материал</td>
-				  				</tr> 
-				  				<tr>
-				  					<td>8,5 м</td>
-				  					<td>5 кг</td>
-				  					<td>Карбон</td>
-				  				</tr> 		
-				  			</table>
-			  			</div>
+			  			<h2 class="visually-hidden">Cамая длинная палка для селфи</h2>
+			  			<div class="slider-content-wrap">
+				  			<div class="slider-image">
+					  			<a href="#">
+					  				<img src="img/slide-1.png" width="384" height="486" alt="Изображение товара">
+					  			</a>
+					  		</div>
+					  		<div class="slider-information">	
+					  			<p><strong>Делай селфи,<br> как Бен Стиллер!</strong></p>
+						  		<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+					  			</p>
+					  			<a class="interactive-item" href="#">Подробнее</a>
+					  			<table class="slider-product-specification">
+					  				<tr class="table-description">
+					  					<td>Длина палки</td>
+					  					<td>Вес палки</td>
+					  					<td>Материал</td>
+					  				</tr> 
+					  				<tr class="table-value">
+					  					<td>8,5 м</td>
+					  					<td>5 кг</td>
+					  					<td>Карбон</td>
+					  				</tr> 		
+					  			</table>
+				  			</div> 
+				  		</div>	  
 			  		</section>	
 		  		</li>
 		  		<li class="slider-list-item">
+		  			<input type="radio" class="visually-hidden slider-button" name="slider-toggle" id="slide-2">
 		  			<section class="slider-content">
 			  			<h2 class="visually-hidden">Мотивирующий фитнесс-браслет</h2>
-				  		<div class="slider-image">
-				  			<a href="#">
-				  				<img src="img/slide-2.png" width="345" height="485" alt="Изображение товара">
-				  			</a>
-			  			</div>
-			  			<div class="slider-information">
-				  			<p><strong>Худеем правильно!</strong></p>
-				  			<p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-			  				<a class="interactive-item" href="#">Подробнее</a>
-				  			<table class="slider-product-specification">
-				  				<tr>
-				  					<td>Без подзарядки</td>
-				  				</tr> 
-				  				<tr>
-				  					<td>48 часов</td>
-				  				</tr>
-				  			</table>
+			  			<div class="slider-content-wrap">
+					  		<div class="slider-image">
+					  			<a href="#">
+					  				<img src="img/slide-2.png" width="345" height="485" alt="Изображение товара">
+					  			</a>
+				  			</div>
+				  			<div class="slider-information">
+					  			<p><strong>Худеем правильно!</strong></p>
+					  			<p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+				  				<a class="interactive-item" href="#">Подробнее</a>
+					  			<table class="slider-product-specification">
+					  				<tr  class="table-description">
+					  					<td>Без подзарядки</td>
+					  				</tr> 
+					  				<tr class="table-value">
+					  					<td>48 часов</td>
+					  				</tr>
+					  			</table>
+				  			</div>
 			  			</div>
 		  			</section>
 		  		</li>
 		  		<li class="slider-list-item">
+		  			<input type="radio" class="visually-hidden slider-button" name="slider-toggle" id="slide-3">
 		  			<section class="slider-content">
 			  			<h2 class="visually-hidden">Квадрокоптер с лазером</h2>
-			  			<div class="slider-image">
-				  			<a href="#">
-				  				<img src="img/slide-3.png" width="526" height="334" alt="Изображение товара">
-				  			</a>
-				  		</div>
-				  		<div class="slider-information">	
-				  			<p><strong>Порхает как бабочка,<br>жалит как пчела!</strong></p>
-				  			<p>Этот обычный, на первый взгляд квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-				  			<a class="interactive-item" href="#">Подробнее</a>
-				  			<table class="slider-product-specification">
-				  				<tr>
-				  					<td>Дальность полета</td>
-				  					<td>Радиус поражения</td>
-				  				</tr> 
-				  				<tr>
-				  					<td>800 м</td>
-				  					<td>50 м</td>
-				  				</tr> 		
-				  			</table>
-				  		</div>		
+			  			<div class="slider-content-wrap">
+				  			<div class="slider-image">
+					  			<a href="#">
+					  				<img src="img/slide-3.png" width="526" height="334" alt="Изображение товара">
+					  			</a>
+					  		</div>
+					  		<div class="slider-information">	
+					  			<p><strong>Порхает как бабочка,<br>жалит как пчела!</strong></p>
+					  			<p>Этот обычный, на первый взгляд квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+					  			<a class="interactive-item" href="#">Подробнее</a>
+					  			<table class="slider-product-specification">
+					  				<tr  class="table-description">
+					  					<td>Дальность полета</td>
+					  					<td>Радиус поражения</td>
+					  				</tr> 
+					  				<tr class="table-value">
+					  					<td>800 м</td>
+					  					<td>50 м</td>
+					  				</tr> 		
+					  			</table>
+					  		</div>
+					  	</div>			
 			  		</section>	
 		  		</li>
 		  	</ol>
-		  	<ul class="slider-toggle-list">
-			  	<li class="slider-toggle-list-item">
-			  		<button class="slider-button current-slide-button">Первый слайд</button>
-			  	</li>
-			  	<li class="slider-toggle-list-item">
-			  		<button class="slider-button">Второй слайд</button>
-			  	</li>
-			  	<li class="slider-toggle-list-item">
-			  		<button class="slider-button">Третий слайд</button>
-			  	</li>
-			</ul>			
   		</article>
   		<section class="site-catalog">
   			<h2 class="visually-hidden">Категории товаров</h2>
 	  		<ul class="site-catalog-list">
-	  				<li class="site-catalog-item"><a href="vr.html">Виртуальная реальность</a></li>
-	  				<li class="site-catalog-item"><a href="inner.html">Моноподы для селфи</a></li>
-	  				<li class="site-catalog-item"><a href="action-cams.html">Экшен-камеры</a></li>
-	  				<li class="site-catalog-item"><a href="fitness-trackers.html">Фитнес-браслеты</a></li>
-	  				<li class="site-catalog-item"><a href="smart-watches.html">Умные часы</a></li>
-	  				<li class="site-catalog-item"><a href="quadrocopters.html">Квадрокоптеры</a></li>
+	  				<li class="site-catalog-item"><a href="vr.html" class="vr">Виртуальная реальность</a></li>
+	  				<li class="site-catalog-item"><a href="inner.html" class="monopods">Моноподы для селфи</a></li>
+	  				<li class="site-catalog-item"><a href="action-cams.html" class="action-cams">Экшен-камеры</a></li>
+	  				<li class="site-catalog-item"><a href="fitness-trackers.html" class="fitness-trackers">Фитнес-браслеты</a></li>
+	  				<li class="site-catalog-item"><a href="smart-watches.html" class="smart-watches">Умные часы</a></li>
+	  				<li class="site-catalog-item"><a href="quadrocopters.html" class="quadrocopters">Квадрокоптеры</a></li>
 	  		</ul>
 	  	</section>
 	  	<section class="site-information">
 	  		<h2 class="visually-hidden">Услуги</h2>
 	  		<div class="site-information-wrapper">
 		  		<ul class="site-information-list">   
-		  			<li>
-		  				<button class="interactive-item" type="button">Доставка</button>
+		  			<li class="site-information-item">
+		  				<label for="delivery" class="interactive-item">Доставка</label>
 		  			</li>
-		  			<li>
-		  				<button class="interactive-item" type="button">Гарантия</button>
+		  			<li class="site-information-item">
+		  				<label for="warranty" class="interactive-item">Гарантия</label>
 		  			</li>
-		  			<li>
-		  				<button class="interactive-item" type="button">Кредит</button>
+		  			<li class="site-information-item">
+		  				<label for="credit" class="interactive-item">Кредит</label>
 		  			</li>
 		  		</ul>
 		  		<ul class="content-list"> 
 					<li class="delivery-item">
-	  					<h3>Доставка</h3> 
-	  					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+						<input type="radio" class="visually-hidden slider-button" name="site-information-slider" id="delivery" checked>
+						<div class="slider-content">
+		  					<h3>Доставка</h3> 
+		  					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+	  					</div>
 	  				</li>
 		  			<li class="warranty-item">
-		  				<h3>Гарантия</h3> 
-		  				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+		  				<input type="radio" class="visually-hidden slider-button" name="site-information-slider" id="warranty">
+		  				<div class="slider-content">
+			  				<h3>Гарантия</h3> 
+			  				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+			  			</div>	
 		  			</li>
 		  			<li class="credit-item">
-		  				<h3>Кредит</h3> 
-		  				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+		  				<input type="radio" class="visually-hidden slider-button" name="site-information-slider" id="credit">
+		  				<div class="slider-content">
+			  				<h3>Кредит</h3> 
+			  				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+			  			</div>	
 		  			</li>
 				</ul>
 			</div>			
@@ -207,22 +237,22 @@
   			<h2 class="visually-hidden">Представленные на сайте брэнды</h2>
 			<ul class="brand-logos-list">
 	  			<li class="brand-logos-item">
-	  				<a href="#">
+	  				<a class="brand-logos-link" href="#">
 	  					<img class="brand-logos-pic" src="img/logo-dji.png" width="260" height="100" alt="Логотип dji">
 	  				</a>	
 	  			</li>
 	  			<li class="brand-logos-item">
-	  				<a href="#">
+	  				<a class="brand-logos-link" href="#">
 	  					<img class="brand-logos-pic" src="img/logo-sp-gadgets.png" width="260" height="100" alt="Логотип SP gadgets">
 	  				</a>	
 	  			</li>
 	  			<li class="brand-logos-item">
-	  				<a href="#">
+	  				<a class="brand-logos-link" href="#">
 	  					<img class="brand-logos-pic" src="img/logo-gopro.png" width="260" height="100" alt="Логотип GoPro">
 	  				</a>	
 	  			</li>
 	  			<li class="brand-logos-item">
-	  				<a href="#">
+	  				<a class="brand-logos-link" href="#">
 	  					<img class="brand-logos-pic" src="img/logo-vive.png" width="260" height="100" alt="Логотип vive">
 	  				</a>	
 	  			</li>
@@ -235,7 +265,7 @@
 	  			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 	  			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 	  			<ul class="transport-companies-list">
-	  				<li class="transport-companies-item">Деловые линии</li>
+	  				<li class="transport-companies-item">Деловые Линии</li>
 	  				<li class="transport-companies-item">Автотрейдинг</li>
 	  				<li class="transport-companies-item">ЖелДорЭкспедиция</li>
 	  			</ul>
@@ -252,52 +282,74 @@
   		</section>
   	</main>	
   	<footer>
-  		<div class="footer-user-block">
-	  		<img src="img/device-footer-logo.png" width="163" height="36" alt="Логотип магазина Device"> 
-	  		<ul class="footer-user-navigation-list">
-	  			<li class="footer-user-navigation-item">
-	  				<a class="footer-link" href="#">Войти</a>
-	  			</li>
-	  		</ul>
-	  		<ul class="footer-visitor-options-list">
-	  			<li class="footer-visitor-options-item">
-		  			<a class="footer-link"  href="#">Сравнить</a>
-		  		</li>
-		  		<li class="footer-visitor-options-item">	
-		  			<a class="footer-link"  href="#">Корзина</a>
-		  		</li>	
-		  	</ul>	
-	  	</div>
-	  	<div class="footer-information-block">	
-	  		<p class="footer-address">г. Москва, ул. Строителей, 15</p>
-	  		<ul class="footer-information-list">
-	  				<li class="footer-information-item"><a href="#">Доставка</a></li>
-	  				<li class="footer-information-item"><a href="#">Гарантия</a></li>
-	  				<li class="footer-information-item"><a href="#">Контакты</a></li>
-	  		</ul>	  
-	  		<p class="footer-phone-number">Тел.: +7(495)495-95-95</p>
-	  	</div>
-	  	<div class="footer-social-block">	
-	  		<ul class="footer-social-list">
-	          <li class="footer-social-item"><a class="social-button" href="#">Фейсбук</a></li>
-	          <li class="footer-social-item"><a class="social-button" href="#">Инстаграм</a></li>
-	          <li class="footer-social-item"><a class="social-button" href="#">Твиттер</a></li>
-	        </ul>	
-	  		<a  class="html-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a>
-  		</div>
+  		<div class="container">
+	  		<div class="footer-user-block">
+		  		<img src="img/device-footer-logo.png" width="163" height="36" alt="Логотип магазина Device"> 
+		  		<ul class="footer-user-navigation-list">
+		  			<li class="footer-user-navigation-item">
+		  				<a class="footer-link login-link" href="login.html">Войти</a>
+		  			</li>
+		  		</ul>
+		  		<ul class="footer-visitor-options-list">
+		  			<li class="footer-visitor-options-item">
+			  			<a class="footer-link product-comparison-link"  href="product-comparison.html">Сравнить</a>
+			  		</li>
+			  		<li class="footer-visitor-options-item">	
+			  			<a class="footer-link cart-link"  href="cart.html">Корзина</a>
+			  		</li>	
+			  	</ul>	
+		  	</div>
+		  	<div class="footer-information-block">	
+		  		<p class="footer-address">г. Москва, ул. Строителей, 15</p>
+		  		<ul class="footer-information-list">
+		  				<li class="footer-information-item">
+		  					<a href="#">Доставка</a>
+		  				</li>
+		  				<li class="footer-information-item">
+		  					<a href="#">Гарантия</a>
+		  				</li>
+		  				<li class="footer-information-item">
+		  					<a href="#">Контакты</a>
+		  				</li>
+		  		</ul>	  
+		  		<p class="footer-phone-number">Тел.: +7(495)495-95-95</p>
+		  	</div>
+		  	<div class="footer-social-block">	
+		  		<ul class="footer-social-list">
+		          <li class="footer-social-item">
+		          	<a class="social-button" href="#">
+		          		<span class="visually-hidden">Фейсбук</span>
+		          	</a>
+		          </li>
+		          <li class="footer-social-item">
+		          	<a class="social-button" href="#">
+		          		<span class="visually-hidden">Инстаграм</span>
+		          	</a>
+		          </li>
+		          <li class="footer-social-item">
+		          	<a class="social-button" href="#">
+		          		<span class="visually-hidden">Твиттер</span>
+		          	</a>
+		          </li>
+		        </ul>	
+		  		<a  class="html-academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+		  			<span class="visually-hidden">HTML academy</span>
+		  		</a>
+	  		</div>
+	  	</div>	
   	</footer>  
   	<section class="modal modal-write-us">
   		<h2 class="visually-hidden">Обратная связь</h2>
   		<button class="modal-close" type="button">Закрыть</button>
   		<form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-  			<label>Ваше имя:
+  			<label class="write-us-label half-width">Ваше имя:
   				<input type="text" name="firstname-lastname" placeholder="Имя Фамилия">
-  			</label> 
-  			<label>Ваш e-mail:	
+  			</label>
+  			<label class="write-us-label half-width">Ваш e-mail:	
   				<input type="email" name="email" placeholder="email@example.com">
   			</label>
-  			<label>Текст письма:
-  				<textarea name="message">В свободной форме</textarea>
+  			<label class="write-us-label full-width">Текст письма:
+  				<textarea name="message" rows="6">В свободной форме</textarea>
   			</label>
   			<input class="interactive-item" type="submit" value="Отправить">		
   		</form>	
